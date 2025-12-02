@@ -5,7 +5,78 @@ final class MovieQuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+   
+    @IBAction private func yesButtonClicked(_ sender: UIButton) {
+    }
+    
+    @IBAction private func noButtonClicked(_ sender: UIButton) {
+    }
+    
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
+    
+    private var currentQuestionIndex: Int = 0
+    private var correctAnswers: Int = 0
 }
+
+    private struct QuizQuestion {
+        let image: String
+        let text: String
+        let correctAnswer: Bool
+}
+
+private let theGodfather = QuizQuestion(
+    image: "The Godfather",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let theDarkKnight = QuizQuestion(
+    image: "The Dark Knight",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let killBill = QuizQuestion(
+    image: "Kill Bill",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let theAvengers = QuizQuestion(
+    image: "The Avengers",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let deadpool = QuizQuestion(
+    image: "Deadpool",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let theGreenKnight = QuizQuestion(
+    image: "The Green Knight",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: true
+)
+private let old = QuizQuestion(
+    image: "Old",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: false
+)
+private let theIceAgeAdventuresOfBuckWild = QuizQuestion(
+    image: "The Ice Age Adventures of Buck Wild",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: false
+)
+private let tesla = QuizQuestion(
+    image: "Tesla",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: false
+)
+private let vivarium = QuizQuestion(
+    image: "Vivarium",
+    text: "Рейтинг этого фильма больше чем 6?",
+    correctAnswer: false
+)
+private let questions: [QuizQuestion] = [theGodfather, theDarkKnight, killBill, theAvengers, deadpool, theGreenKnight, old, theIceAgeAdventuresOfBuckWild, theAvengers, deadpool, theGreenKnight, old, theIceAgeAdventuresOfBuckWild, theAvengers, deadpool, theGreenKnight, old, theIceAgeAdventuresOfBuckWild]
 
 /*
  Mock-данные
